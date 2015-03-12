@@ -7,7 +7,6 @@ var hexCode;
 
 
 
-
 function newPalette() {
     location.reload();
 }
@@ -21,21 +20,23 @@ function rgbToHex(r, g, b) {
     return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 }
 
-for ( var i = 1; i<= 9; i+=1) {
-	r = Math.floor(Math.random() * 256 );
-	g = Math.floor(Math.random() * 256 );
-	b = Math.floor(Math.random() * 256 );
-	rgbColor = 'rgb(' + r + ',' + g + ',' + b + ')';
-	hexCode = rgbToHex(r,g,b);
-	html += '<div class="color" style=background-color:' + rgbColor + '>' +
-		'<footer class="caption">' + hexCode + '</footer>' + '</div>';
-	
+for ( var i = 0; i < 9; i+=1) {
+	html = '<div class="color"' + '>' +
+	'</div>';
+	document.write(html);
+	var elems = document.getElementsByClassName('color');
+		for(var i = 0; i < elems.length; i++) {
+			r = Math.floor(Math.random() * 256 );
+			g = Math.floor(Math.random() * 256 );
+			b = Math.floor(Math.random() * 256 );
+			rgbColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+			hexCode = rgbToHex(r,g,b);
+			elems[i].style.backgroundColor = rgbColor;
+	}
+
 }
 
 
-
-
-document.write(html);
 
 /*   not impleted     Pulls every accent color into an array. see note.
 

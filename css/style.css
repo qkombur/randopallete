@@ -4,84 +4,120 @@
 	font-weight: 100;
 }
 
-/* Top header */
+/* Top media query for 700px or higher */
 
-h1{
-	text-align: center;
+@media (min-width: 700px) and (min-height: 900px) {
+
+	h1{
+	text-align: right;
 	background: none; 
 	
 	padding-top: 15px;
 	padding-bottom: 15px;
 	color: white;
 	margin: 0;
+	}
+
+	/* Front div or top layer*/
+
+	.color{
+		vertical-align: top;
+		margin: 15px auto;
+		height: 200px;
+		width: 250px;
+		box-shadow: 0 3px 4px rgba(0, 0, 0, .3);
+		display: inline-block;
+	}
+	.upbackground  {
+		text-align: center;
+		background: rgba(255,255,255, .2); /* grey */
+		margin: 33px auto;
+		max-width: 90%;
+		padding: 15px 15px 0px 15px;
+		box-shadow: 0 12px 15px -1px rgba(0, 0, 0, 0.3)
+
+	}
+
+	h3 {
+		color: black;
+	}
 
 
+	/* Background background*/
+	body {
+		background: url(../img/background.svg);
+	}
+
+	footer {
+		color: black;
+		text-align: center;
+	}
 
 }
 
+@media (max-width: 699px){
+	/* For the fonts */
 
-/* Front div or top layer*/
-.caption{
-	margin: 30px 5px;
-	padding-top: 5px;
+	/* Top header */
+	h1{
+	text-align: center;
+	background: none;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	color: white;
-}
+	margin: 0;
+	}
+	/* Front div or top layer*/
 
-.color{
+	.color{
 	vertical-align: top;
 	margin: 15px auto;
-	height: 30%;
-	width: 30%;
+	height: 139px;
+	width: 100px;
 	box-shadow: 0 3px 4px rgba(0, 0, 0, .3);
 	display: inline-block;
-}
-.upbackground  {
+	}
+	.upbackground {
 	text-align: center;
 	background: rgba(255,255,255, .2); /* grey */
 	margin: 33px auto;
-	max-width: 690px;
+	max-width: 100%;
 	padding: 15px 15px 0px 15px;
 	box-shadow: 0 12px 15px -1px rgba(0, 0, 0, 0.3)
+	}
 
+	h3 {
+	color: white;
+	}
+
+	/* Background background*/
+	body {
+	background: url(../img/background.svg);
+	background-repeat: no-repeat;
+	background-color: #333;
+	}
+	footer {
+	color: white;
+	text-align: center;
+	}
 }
 
 button:hover {
-
 	background-color: rgba(0, 0, 0, .5);
 	color: white;
-} 
-
-
-
-h3 {
-	color: black;
-}
-
+	}
 button {
 	position: relative;
-
 	margin: 5px auto 15px;
 	max-width: 300px;
 	width: 90%;
 	height: 50px;
-
 	overflow: hidden;
 	border: none;
 	outline: none;
 	border-radius: 2px;
 	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
-
 	background-color: rgba(255,255,255,.3);
 	color: black;
-	transition: background-color  0.5s ease;
-	}
-
-/* Background background*/
-body {
-	background: url(../img/background.svg);
-}
-
-footer {
-	color: black;
-	text-align: center;
+	transition: background-color 0.5s ease;
 }
