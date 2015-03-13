@@ -101,7 +101,7 @@
 	text-align: center;
 	}
 }
-
+/* Not affected by media queries */
 button:hover {
 	background-color: rgba(0, 0, 0, .5);
 	color: white;
