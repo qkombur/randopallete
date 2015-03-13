@@ -2,6 +2,7 @@ var html;
 var rgbColor;
 // var hexCode;
 var x;
+var r, g ,b;
 // used to reload page on button press
 function newPalette() {
     location.reload();
@@ -29,9 +30,9 @@ for ( var i = 0; i < 9; i+=1) {
 	var elems = document.getElementsByClassName('color');
 	//this loop is used to avoid generating inline styles
 		for(var i = 0; i < elems.length; i++) {
-			var r = randomNumber(r);
-			var g = randomNumber(g)
-			var b = randomNumber(b)
+			r = randomNumber(r);
+			g = randomNumber(g)
+			b = randomNumber(b)
 			rgbColor = 'rgb(' + r + ',' + g + ',' + b + ')';
 			//sets css style to random color
 			elems[i].style.backgroundColor = rgbColor;
