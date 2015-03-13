@@ -1,16 +1,12 @@
-var html = '';
-var red;
-var green;
-var blue;
+var html;
 var rgbColor;
-var hexCode;
-
-
+// var hexCode;
+var x;
 // used to reload page on button press
 function newPalette() {
     location.reload();
 }
-// translates rgb values into hexcode 
+/* translates rgb values into hexcode 
 function componentToHex(c) {
     var hex = c.toString(16);
     return hex.length == 1 ? "0" + hex : hex;
@@ -18,6 +14,11 @@ function componentToHex(c) {
 
 function rgbToHex(r, g, b) {
     return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
+*/
+
+function randomNumber(x){
+	return  x = Math.floor(Math.random() * 256 )
 }
 
 // loop that generates rgb values and outputs a div class to the page.
@@ -28,11 +29,10 @@ for ( var i = 0; i < 9; i+=1) {
 	var elems = document.getElementsByClassName('color');
 	//this loop is used to avoid generating inline styles
 		for(var i = 0; i < elems.length; i++) {
-			r = Math.floor(Math.random() * 256 );
-			g = Math.floor(Math.random() * 256 );
-			b = Math.floor(Math.random() * 256 );
+			var r = randomNumber(r);
+			var g = randomNumber(g)
+			var b = randomNumber(b)
 			rgbColor = 'rgb(' + r + ',' + g + ',' + b + ')';
-			hexCode = rgbToHex(r,g,b);
 			//sets css style to random color
 			elems[i].style.backgroundColor = rgbColor;
 	}
