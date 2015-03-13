@@ -33,6 +33,7 @@ for ( var i = 0; i < 9; i+=1) {
 			b = Math.floor(Math.random() * 256 );
 			rgbColor = 'rgb(' + r + ',' + g + ',' + b + ')';
 			hexCode = rgbToHex(r,g,b);
+			//sets css style to random color
 			elems[i].style.backgroundColor = rgbColor;
 	}
 
