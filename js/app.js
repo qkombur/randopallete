@@ -1,51 +1,26 @@
-var html;
-var rgbColor;
-// var hexCode;
-var x;
-var r, g ,b;
-// used to reload page on button press
+//Array of material design hexcodes.
+var palette = [ "#ff1744", "#f50057", "#d500f9", "#651fff", "#3d5afe", "#2979ff", "#00b0ff", "#00e5ff", "#1de9b6", "#00e676",
+               "#b71c1c", "#880e4f", "#4a148c", "#311b92", "#1a237e", "#0d47a1", "#01579b", "#006064", "#004d40", "#1b5e20",
+               "#ffebee", "#fce4ec", "#f3e5f5", "#ede7f6", "#e8eaf6", "#e3f2fd", "#e1f5fe", "#e0f7fa", "#e0f2f1", "#e8f5e9",
+               "#ffcdd2", "#f8bbd0", "#e1bee7", "#d1c4e9", "#c5cae9", "#bbdefb", "#b3e5fc", "#b2ebf2", "#b2dfdb", "#c8e6c9"]
+               
+//reloads page. feels hacky
 function newPalette() {
     location.reload();
 }
-/* translates rgb values into hexcode 
-function componentToHex(c) {
-    var hex = c.toString(16);
-    return hex.length == 1 ? "0" + hex : hex;
-}
 
-function rgbToHex(r, g, b) {
-    return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
-}
-*/
-
-function randomNumber(x){
-	return  x = Math.floor(Math.random() * 256 )
-}
-
-// loop that generates rgb values and outputs a div class to the page.
+// loop that writes html to page.
 for ( var i = 0; i < 9; i+=1) {
-	html = '<div class="color"' + '>' +
+	var html = '<div class="color"' + '>' +
 	'</div>';
 	document.write(html);
 	var elems = document.getElementsByClassName('color');
 	//this loop is used to avoid generating inline styles
 		for(var i = 0; i < elems.length; i++) {
-			r = randomNumber(r);
-			g = randomNumber(g)
-			b = randomNumber(b)
-			rgbColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+			//pick a random hexcode from the array palette
+			var rand = palette[Math.floor(Math.random() * palette.length)];
 			//sets css style to random color
-			elems[i].style.backgroundColor = rgbColor;
+			elems[i].style.backgroundColor = rand;
 	}
 
 }
-
-
-
-/*   not impleted     Pulls every accent color into an array. see note.
-
-[].filter.call(document.querySelectorAll('.color-group .color'), function(el) {
-		return el.querySelector('.shade').textContent === 'A400';
-	}).map(function (el) {
-		return el.querySelector('.hex').textContent;
-	}); */
