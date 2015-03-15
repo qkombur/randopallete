@@ -15,12 +15,15 @@ for ( var i = 0; i < 9; i+=1) {
 	'</div>';
 	document.write(html);
 	var elems = document.getElementsByClassName('color');
-	//this loop is used to avoid generating inline styles
+	//this loop picks 2 random colors
 		for(var i = 0; i < elems.length; i++) {
 			//pick a random hexcode from the array palette
 			var rand = palette[Math.floor(Math.random() * palette.length)];
 			//sets css style to random color
 			elems[i].style.backgroundColor = rand;
+			//used for accent color
+			rand = palette[Math.floor(Math.random() * palette.length)];
+			elems[i].style.borderBottomColor = rand;
 	}
 
 }

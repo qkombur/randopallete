@@ -6,27 +6,30 @@
 
 /* Top media query for 700px or higher */
 
-@media (min-width: 700px) and (min-height: 900px) {
+@media (min-width: 700px){
 
 	h1{
-	text-align: right;
-	background: none; 
-	
+	text-align: center;
 	padding-top: 15px;
 	padding-bottom: 15px;
 	color: white;
 	margin: 0;
+	font-size: 4em;
 	}
 
 	/* Front div or top layer*/
 
 	.color{
 		vertical-align: top;
-		margin: 15px auto;
+		margin: 15px 5px;
 		height: 200px;
 		width: 250px;
 		box-shadow: 0 3px 4px rgba(0, 0, 0, .3);
+		padding: 0px 5px;
 		display: inline-block;
+		border-bottom-width: 20px;
+		border-bottom-style: solid;
+		border-bottom-color: white;
 	}
 	.upbackground  {
 		text-align: center;
@@ -34,18 +37,20 @@
 		margin: 33px auto;
 		max-width: 90%;
 		padding: 15px 15px 0px 15px;
-		box-shadow: 0 12px 15px -1px rgba(0, 0, 0, 0.3)
+		box-shadow: 0 12px 15px -1px rgba(0, 0, 0, 0.3);
 
 	}
 
 	h3 {
 		color: black;
+		text-decoration: bold;
+		font-weight: 400;
 	}
 
 
 	/* Background background*/
 	footer {
-		color: black;
+		color: white;
 		text-align: center;
 	}
 
@@ -83,7 +88,7 @@
 	}
 
 	h3 {
-	color: white;
+	color: black;
 	}
 
 	/* Background background*/
@@ -111,6 +116,8 @@ button {
 	background-color: rgba(255,255,255,.3);
 	color: black;
 	transition: background-color 0.5s ease;
+	text-decoration: bold;
+	font-weight: 400;
 }
 
 .upbackground {
