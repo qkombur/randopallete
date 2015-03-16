@@ -30,6 +30,7 @@
 		border-bottom-width: 20px;
 		border-bottom-style: solid;
 		border-bottom-color: white;
+		border-radius: 20px;
 	}
 	.upbackground  {
 		text-align: center;
@@ -77,6 +78,9 @@
 	width: 100px;
 	box-shadow: 0 3px 4px rgba(0, 0, 0, .3);
 	display: inline-block;
+	border-bottom-style: solid;
+	border-bottom-color: white;
+	border-bottom-width: 20px;
 	}
 	.upbackground {
 	text-align: center;
@@ -97,6 +101,27 @@
 	text-align: center;
 	}
 }
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+	.color{
+	vertical-align: top;
+	margin: 15px auto;
+	height: 139px;
+	width: 50%;
+	box-shadow: 0 3px 4px rgba(0, 0, 0, .3);
+	
+	border-bottom-style: solid;
+	border-bottom-color: white;
+	border-bottom-width: 20px;
+	}
+	.upbackground {
+	background: url(../img/background.svg);
+	background
+	}
+
+}
+
+
 /* Not affected by media queries */
 button:hover {
 	background-color: rgba(0, 0, 0, .5);
@@ -116,7 +141,6 @@ button {
 	background-color: rgba(255,255,255,.3);
 	color: black;
 	transition: background-color 0.5s ease;
-	text-decoration: bold;
 	font-weight: 400;
 }
 
@@ -127,4 +151,6 @@ button {
 
 body {
 	background: #333;
+	height: 100%;
+	width: 100%;
 }
